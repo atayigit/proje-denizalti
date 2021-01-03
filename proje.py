@@ -17,20 +17,6 @@ class SilahliKuvvetler(object):
             print(self.name,"s working: ", self.activity)
 
         
-class Jet(SilahliKuvvetler):
-    "This class represents Jets -Mete"
-    def __init__(self,name,yearOfStart,activity):                 
-        SilahliKuvvetler.__init__(self, name, yearOfStart, activity)        # This line is for use the super class's(SilahlıKuvvetler) init module 
-
-    # def LoadOn(self,bomb=0):
-    #     self.bomb = bomb
-    #     print(self.name, "has", self.bomb,"tons bomb.")
-
-    def TakeOff(self, adress, bomb2drop=0):
-        self.bomb2drop = bomb2drop                                                          # with tonnes
-        self.adress = adress                                                                # city or region
-        # self.bomb = self.bomb - self.bomb2drop                                            # after drop, diminution of bomb quantity
-        print(self.name,"has bombed:",self.adress,", with:", self.bomb2drop,"tons bombs.")  # informing the user
 
 
 class Denizaltı(SilahliKuvvetler):
@@ -309,16 +295,6 @@ class Denizaltı(SilahliKuvvetler):
             print("lütfen üs bölgesi olarak foça veya sinopu seçin")
 
                           
-
-             
-             
-
-
-
-
-    
-    
-
         
                                                                                         
 
