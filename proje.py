@@ -20,7 +20,7 @@ class Denizaltı(SilahliKuvvetler):
     "Bu sınıf denizaltıları temsil eder, TSK envanterinde aktif faaliyette olan denizaltı sınıfları incelenmiştir -Ata" #silahlı kuvvetler classına override yapılmıştır
     
     def __init__(self,name,yearOfStart):                 
-        SilahliKuvvetler.__init__(self, name, yearOfStart,)
+        SilahliKuvvetler.__init__(self, name, yearOfStart)
 
     def sınıflar(self):
         print("GÜR , PREVEZE , AY ")                                          #Türk Silahlı Kuvvetlerinde 3 çeşit denizaltı sınıfı vardır
@@ -53,7 +53,6 @@ class Denizaltı(SilahliKuvvetler):
             print("lütfen TSK envanterinde olan bir denizaltı sınıfı giriniz")
             
 
-
     def Seyir_menzili(self,denizaltının_sınıfı):
         self.denizaltının_sınıfı=denizaltının_sınıfı #Denizaltı sınıflarına göre menzillerini gösterir, metreye çevirir.
         nm=1852                                                                         #bir deniz mili (nautical mile) 1852 metredir hesaplamalarımızda kullanacağız
@@ -84,25 +83,21 @@ class Denizaltı(SilahliKuvvetler):
             return True                                         # En eski denizaltılar ay sınıfı denizaltılardır ve 1975 te alınmıştır,hala aktif servistedir.  
         else:  
             return False
-            
-
-
-
-            
-        
-                                                                                
-TCG_GÜR = Denizaltı("tcg_gür",2004)
-TCG_GÜR.IsRetired()
+                                                                               
+TCG_GÜR = Denizaltı("TCG_GÜR",2004)
+print(TCG_GÜR.name,"emekli edilmiştir: ",TCG_GÜR.IsRetired())
 TCG_GÜR.sınıflar()
 TCG_GÜR.slogan("GÜR")
 TCG_GÜR.Deplasman_tonajı("GÜR")
 TCG_GÜR.Seyir_menzili("GÜR")
 
-
-TCG_PREVEZE = Denizaltı("tcg_preveze",1989,)
-TCG_PREVEZE.IsRetired()
+TCG_PREVEZE = Denizaltı("TCG_PREVEZE",1989,)
+print(TCG_PREVEZE.name,"emekli edilmiştir: ",TCG_PREVEZE.IsRetired())
 TCG_PREVEZE.slogan("PREVEZE")
 TCG_PREVEZE.Deplasman_tonajı("PREVEZE")
 TCG_PREVEZE.Seyir_menzili("PREVEZE")
+
+
+
 
 
