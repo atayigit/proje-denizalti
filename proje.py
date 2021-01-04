@@ -75,6 +75,16 @@ class Denizaltı(SilahliKuvvetler):
 
         elif self.denizaltının_sınıfı!="AY" and self.denizaltının_sınıfı!="PREVEZE" and self.denizaltının_sınıfı!="GÜR":            #yanlış girişlerde kullanıcıyı uyarır
             print("lütfen TSK envanterinde olan bir denizaltı sınıfı giriniz")
+    def IsRetired(self):                                         # Silahlı kuvvetlerdeki   IsRetired fonksiyonunun (override) üzerine yazacağız
+                                                                 # Gemiler silahlı kuvvetlerde en uzun süre kullanılabilen araçlardır , bunun sebebi ise her sene periyodik bakımları olmasıdır.
+        from datetime import datetime
+        instanceTime = datetime.now()
+
+        if (instanceTime.year - self.yearOfStart) > 60:  
+            return True                                         # En eski denizaltılar ay sınıfı denizaltılardır ve 1975 te alınmıştır,hala aktif servistedir.  
+        else:  
+            return False
+            
 
 
 
