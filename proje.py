@@ -21,7 +21,7 @@ class Denizaltı(SilahliKuvvetler):
     
     def __init__(self,name,yearOfStart):                 
         SilahliKuvvetler.__init__(self, name, yearOfStart)
-       print("-"*27)
+        print("-"*27)
         print("ETKİN , CAYDIRICI , SAYGIN")                                    #Türk Deniz Kuvvetleri'nin sloganıdır.Denizaltı sınıfı çağrıldığında yansıtılacaktır.                                      
         print("-"*27)
 
