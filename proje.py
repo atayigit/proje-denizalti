@@ -29,7 +29,6 @@ class Denizaltı(SilahliKuvvetler):
     def slogan(self,denizaltının_sınıfı):
         self.denizaltının_sınıfı=denizaltının_sınıfı          #Her denizaltının kendine has bir sloganı olur. Her sınıf denizaltından birer örnek slogan yazdırdım
 
-
         if self.denizaltının_sınıfı=="GÜR":
             print("DENİZLER ONUNLA HÜR")
         if self.denizaltının_sınıfı=="PREVEZE":
@@ -50,8 +49,7 @@ class Denizaltı(SilahliKuvvetler):
             print("Satıhta 980 ton, dalmış halde 1185 ton taşır" )                          #kaynakça : https://www.dzkk.tsk.tr/Destek/icerik/ay-sinifi 
 
         elif self.denizaltının_sınıfı!="AY" and self.denizaltının_sınıfı!="PREVEZE" and self.denizaltının_sınıfı!="GÜR":         #yanlış girişlerde kullanıcıyı uyarır
-            print("lütfen TSK envanterinde olan bir denizaltı sınıfı giriniz")
-            
+            print("lütfen TSK envanterinde olan bir denizaltı sınıfı giriniz")           
 
     def Seyir_menzili(self,denizaltının_sınıfı):
         self.denizaltının_sınıfı=denizaltının_sınıfı #Denizaltı sınıflarına göre menzillerini gösterir, metreye çevirir.
@@ -83,21 +81,25 @@ class Denizaltı(SilahliKuvvetler):
             return True                                         # En eski denizaltılar ay sınıfı denizaltılardır ve 1975 te alınmıştır,hala aktif servistedir.  
         else:  
             return False
-                                                                               
+                                                                                                   
 TCG_GÜR = Denizaltı("TCG_GÜR",2004)
-print(TCG_GÜR.name,"emekli edilmiştir: ",TCG_GÜR.IsRetired())
 TCG_GÜR.sınıflar()
+print(TCG_GÜR.name,"emekli edilmiştir: ",TCG_GÜR.IsRetired())
 TCG_GÜR.slogan("GÜR")
 TCG_GÜR.Deplasman_tonajı("GÜR")
 TCG_GÜR.Seyir_menzili("GÜR")
-
-TCG_PREVEZE = Denizaltı("TCG_PREVEZE",1989,)
+print("\n")
+TCG_PREVEZE = Denizaltı("TCG_PREVEZE",1989)
 print(TCG_PREVEZE.name,"emekli edilmiştir: ",TCG_PREVEZE.IsRetired())
 TCG_PREVEZE.slogan("PREVEZE")
 TCG_PREVEZE.Deplasman_tonajı("PREVEZE")
 TCG_PREVEZE.Seyir_menzili("PREVEZE")
-
-
+print("\n")                                                                                    #çağırırken karmaşa olmaması için boşluk ekledim
+TCG_AY=Denizaltı("TCG_AY",1975)
+print(TCG_AY.name,"emekli edilmiştir: ",TCG_AY.IsRetired())
+TCG_AY.slogan("AY")
+TCG_AY.Deplasman_tonajı("AY")
+TCG_GÜR.Seyir_menzili("AY")
 
 
 
