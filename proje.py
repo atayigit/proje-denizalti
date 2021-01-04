@@ -21,7 +21,9 @@ class Denizaltı(SilahliKuvvetler):
     
     def __init__(self,name,yearOfStart):                 
         SilahliKuvvetler.__init__(self, name, yearOfStart)
+       print("-"*27)
         print("ETKİN , CAYDIRICI , SAYGIN")                                    #Türk Deniz Kuvvetleri'nin sloganıdır.Denizaltı sınıfı çağrıldığında yansıtılacaktır.                                      
+        print("-"*27)
 
     def sınıflar(self):
         print("GÜR , PREVEZE , AY ")                                          #Türk Silahlı Kuvvetlerinde 3 çeşit denizaltı sınıfı vardır
@@ -29,7 +31,6 @@ class Denizaltı(SilahliKuvvetler):
                                                                                             
     def slogan(self,denizaltının_sınıfı):
         self.denizaltının_sınıfı=denizaltının_sınıfı          #Her denizaltının kendine has bir sloganı olur. Her sınıf denizaltından birer örnek slogan yazdırdım
-
 
         if self.denizaltının_sınıfı=="GÜR":
             print("DENİZLER ONUNLA HÜR")
@@ -53,7 +54,6 @@ class Denizaltı(SilahliKuvvetler):
         elif self.denizaltının_sınıfı!="AY" and self.denizaltının_sınıfı!="PREVEZE" and self.denizaltının_sınıfı!="GÜR":         #yanlış girişlerde kullanıcıyı uyarır
             print("lütfen TSK envanterinde olan bir denizaltı sınıfı giriniz")
             
-
     def Seyir_menzili(self,denizaltının_sınıfı):
         self.denizaltının_sınıfı=denizaltının_sınıfı #Denizaltı sınıflarına göre menzillerini gösterir, metreye çevirir.
         nm=1852                                                                         #bir deniz mili (nautical mile) 1852 metredir hesaplamalarımızda kullanacağız
@@ -84,8 +84,7 @@ class Denizaltı(SilahliKuvvetler):
             return True                                         # En eski denizaltılar ay sınıfı denizaltılardır ve 1975 te alınmıştır,hala aktif servistedir.  
         else:  
             return False
-            
-                                                                                        
+                                                                                                    
 TCG_GÜR = Denizaltı("TCG_GÜR",2004)
 TCG_GÜR.sınıflar()
 print(TCG_GÜR.name,"emekli edilmiştir: ",TCG_GÜR.IsRetired())
