@@ -99,7 +99,7 @@ TCG_GÜR.Deplasman_tonajı("GÜR")
 TCG_GÜR.Seyir_menzili("GÜR")
 
 
-TCG_PREVEZE = Denizaltı("20binFersah",1989,)
+TCG_PREVEZE = Denizaltı("tcg_preveze",1989,)
 TCG_PREVEZE.IsRetired()
 TCG_PREVEZE.slogan("PREVEZE")
 TCG_PREVEZE.Deplasman_tonajı("PREVEZE")
